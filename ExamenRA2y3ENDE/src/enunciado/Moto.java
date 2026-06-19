@@ -22,8 +22,13 @@ public class Moto extends Coche{
 	public double calcularPrecioBruto(double extraKilometraje) {
 		
 		double precioBruto = precioBase + extraKilometraje;
-		return precioBruto;
 		
+		
+		if(extraKilometraje < 0) {
+			throw new IllegalArgumentException("El valor extra del kilometraje no puede ser negativo");
+		}
+		
+		return precioBruto;
 	}
 
 }
