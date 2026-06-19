@@ -61,4 +61,11 @@ public abstract class Vehiculo {
         this.tasaEmisiones = tasaEmisiones;
     }
 	
+    public double calcularPrecioBruto(double fianza, int numDias) {
+    	double precioBruto = precioBase+fianza/numDias;
+    	
+    	return precioBruto;
+    }
+    
+    public abstract double calcularPrecioNeto();
 }
