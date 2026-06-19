@@ -1,5 +1,6 @@
 package enunciado;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
@@ -13,10 +14,16 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+
 @RunWith(Parameterized.class)
 class TestMoto extends Moto{
 
 
+	private boolean electrico;
+	private int numDias;
+	private double fianza;
+	
+	private double precioEsperado;
 	
 	public TestMoto(String modelo, double precioBase, Boolean electrico, float tasaEmisiones, double fianza,
 			int numDias) {
@@ -64,4 +71,12 @@ class TestMoto extends Moto{
 		});
 	}
 	
+	@Test
+	public void TestError() {
+	Moto	cuenta = new Moto("Test",2000.00, false,0.07f,-200,14);
+	
+	assertEquals(precioEsperado, moto.calcularPrecioBruto(fianza, numDias));
+	
+	}
+
 }
