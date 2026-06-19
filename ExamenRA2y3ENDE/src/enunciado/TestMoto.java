@@ -76,7 +76,6 @@ class TestMoto extends Moto{
 	Moto	cuenta = new Moto("Test",2000.00, false,0.07f,-200,14);
 	
 	assertEquals(precioEsperado, moto.calcularPrecioBruto(fianza, numDias));
-	
 	}
 
 }
