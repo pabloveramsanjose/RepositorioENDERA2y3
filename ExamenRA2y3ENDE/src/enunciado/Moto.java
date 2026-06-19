@@ -31,4 +31,14 @@ public class Moto extends Coche{
 		return precioBruto;
 	}
 
+	public double calcularPrecioNeto(double extraKilometraje) {
+
+		if(electrico == false) {
+		return calcularPrecioBruto(extraKilometraje) - calcularPrecioBruto(extraKilometraje);
+		
+		}else{
+			return calcularPrecioBruto(extraKilometraje) - calcularPrecioBruto(extraKilometraje)*0.07;
+		}
+	}
+
 }
