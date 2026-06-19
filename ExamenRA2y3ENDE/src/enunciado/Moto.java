@@ -17,4 +17,13 @@ public class Moto extends Coche{
 		}
 	}
 
+	
+
+	public double calcularPrecioBruto(double extraKilometraje) {
+		
+		double precioBruto = precioBase + extraKilometraje;
+		return precioBruto;
+		
+	}
+
 }
