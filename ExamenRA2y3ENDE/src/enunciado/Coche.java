@@ -1,3 +1,9 @@
+/**
+ * @author: Pablo Vera
+ * @date: 19/06/2026
+ * @version:1.0.0
+ * Clase Moto creada a partir  de la clase Coche
+ */
 package enunciado;
 
 public class Coche extends Vehiculo{
@@ -37,7 +43,9 @@ public class Coche extends Vehiculo{
 	}
 
 
-
+/**
+ * Metodo creado para calcular el precio neto con la fianza y el numero de dias
+ */
 	@Override
 	public double calcularPrecioNeto() {
 
